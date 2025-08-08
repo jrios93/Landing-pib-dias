@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* Esquema conservador para ministerio establecido - Inspirado en Grace To You */
+@theme {
+  /* Superficies */
+  --color-background: #fff8ed; /* fondo base (claro y cálido) */
+  --color-card: #f8f8f8; /* tarjetas, bloques neutros */
+  --color-accent: #e9e8e0; /* detalles sutiles, separadores */
+  --color-border: #e9e8e0; /* bordes y divisores */
+
+  /* Texto */
+  --color-foreground: #232c32; /* texto principal en fondos claros */
+  --color-foreground-muted: #333333; /* texto secundario */
+
+  /* CTA / acciones */
+  --color-primary: #232c32; /* botón principal (oscuro) */
+  --color-primary-foreground: #f8f8f8; /* texto dentro del CTA */
+  --color-primary-hover: #293339; /* hover del CTA */
+
+  /* Opcional: si quieres etiquetas o chips tenues sobre claro */
+  --color-badge: #f2e8d8;
+  --color-badge-foreground: #232c32;
+}
+
+/* Clases de utilidad conservadoras */
+@layer utilities {
+  .text-primary {
+    color: var(--color-foreground);
+  }
+  .bg-background {
+    background-color: var(--color-background);
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+  .text-muted {
+    color: var(--color-foreground-muted);
+  }
+
+  /* Botón principal conservador */
+  .btn-primary {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    padding: 0.75rem 2rem;
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+    border: 2px solid var(--color-primary);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+  }
+
+  /* Botón secundario */
+  .btn-secondary {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-primary-foreground);
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--color-primary-foreground);
+    border-radius: 0.375rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-primary-foreground);
+    color: var(--color-primary);
+  }
+
+  /* Encabezados conservadores */
+  .heading-primary {
+    color: var(--color-primary);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  /* Secciones destacadas */
+  .section-highlight {
+    border-left: 4px solid var(--color-primary);
+  }
+}
+
+/* Tipografía conservadora */
+.font-serif {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+
+/* Transiciones suaves */
+* {
+  transition: all 0.2s ease;
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación para el marcador del mapa */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
