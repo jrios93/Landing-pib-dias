@@ -65,7 +65,7 @@ export const pastores = [
     descripcion:
       "Siervo de Dios Comprometido con la predicación expositiva fiel de las Escrituras y el avance del evangelio.",
     especialidad: "Predicación Expositiva",
-    imagen: "src/assets/images/pastores/daniel_rose.jpg",
+    imagen: "/images/pastores/daniel_rose.jpg",
     ministerio: "Ministerio Internacional",
     experiencia: "20+ años",
   },
@@ -75,7 +75,7 @@ export const pastores = [
     descripcion:
       "Pastor de la iglesia local, dedicado al cuidado pastoral y la enseñanza bíblica sólida. Comprometido con la edificación de los santos y el crecimiento espiritual de la congregación.",
     especialidad: "Cuidado Pastoral",
-    imagen: "src/assets/images/pastores/christian_soto.jpg",
+    imagen: "/images/pastores/christian_soto.jpg",
     ministerio: "Iglesia Local",
     experiencia: "15+ años",
   },

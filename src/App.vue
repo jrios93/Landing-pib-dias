@@ -3,8 +3,8 @@ document.documentElement.lang = 'es-PE';
 import { ref, onMounted } from 'vue'
 import { Menu, X, MapPin, Calendar, Clock, Users, Phone, Mail, ChevronDown, Star, Award, BookOpen, Quote } from 'lucide-vue-next'
 import bgEvent from './assets/images/conference2.png'
-import logo from './assets/images/logo/logo-web.webp'
-import logo2 from './assets/images/logo/prueba.webp'
+import logo from '/images/logo/logo-web.webp'
+import logo2 from '/images/logo/prueba.webp'
 import {scheduleData,dayLabels,pastores} from './data'
 
 
