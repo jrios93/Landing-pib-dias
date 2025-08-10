@@ -23,12 +23,6 @@ export const scheduleData = {
   ],
   sabado: [
     {
-      time: "10:00",
-      activity: "Ciclo de Predicaciones Misioneras",
-      description:
-        "Sesión matutina sobre estrategias misioneras bíblicas y el papel de cada creyente en la Gran Comisión.",
-    },
-    {
       time: "18:00",
       activity: "Predicación Misionera",
       description:
@@ -61,73 +55,21 @@ export const dayLabels = {
 export const pastores = [
   {
     nombre: "Hno. Daniel Rose",
-    titulo: "Predicador Principal",
-    descripcion:
-      "Siervo de Dios Comprometido con la predicación expositiva fiel de las Escrituras y el avance del evangelio.",
-    especialidad: "Predicación Expositiva",
+    rol: "Predicador Principal",
+    iglesia: "Ministerio Internacional",
     imagen: "/images/pastores/daniel_rose.jpg",
-    ministerio: "Ministerio Internacional",
-    experiencia: "20+ años",
   },
   {
-    nombre: "Pst.Christian Soto",
-    titulo: "Pastor Anfitrión",
-    descripcion:
-      "Pastor de la iglesia local, dedicado al cuidado pastoral y la enseñanza bíblica sólida. Comprometido con la edificación de los santos y el crecimiento espiritual de la congregación.",
-    especialidad: "Cuidado Pastoral",
+    nombre: "Pst. Christian Soto",
+    rol: "Pastor Anfitrión",
+    iglesia: "Primera Iglesia Bautista de Huancayo",
     imagen: "/images/pastores/christian_soto.jpg",
-    ministerio: "Iglesia Local",
-    experiencia: "15+ años",
   },
   {
-    nombre: "Pst. Pablo Rose",
-    titulo: "Misionero Invitado",
-    descripcion:
-      "Ministro con experiencia en evangelismo y plantación de iglesias. Comprometido con la Gran Comisión y la formación de líderes para la obra del Señor.",
-    especialidad: "Misionero",
-    imagen: "/placeholder.svg?height=300&width=300",
-    ministerio: "Plantación de Iglesias",
-    experiencia: "10+ años",
-  },
-  {
-    nombre: "Pst. Wilfredo Flores",
-    titulo: "Pastor Invitado",
-    descripcion:
-      "Ministro con experiencia en evangelismo y plantación de iglesias. Comprometido con la Gran Comisión y la formación de líderes para la obra del Señor.",
-    especialidad: "Cuidado Pastoral",
-    imagen: "/placeholder.svg?height=300&width=300",
-    ministerio: "Plantación de Iglesias",
-    experiencia: "10+ años",
-  },
-  {
-    nombre: "Pst. Freddy Herrera",
-    titulo: "Misionero Invitado",
-    descripcion:
-      "Ministro con experiencia en evangelismo y plantación de iglesias. Comprometido con la Gran Comisión y la formación de líderes para la obra del Señor.",
-    especialidad: "Misionero",
-    imagen: "/placeholder.svg?height=300&width=300",
-    ministerio: "Plantación de Iglesias",
-    experiencia: "10+ años",
-  },
-  {
-    nombre: "Pst. Octavio Rojas",
-    titulo: "Pastor Invitado",
-    descripcion:
-      "Ministro con experiencia en evangelismo y plantación de iglesias. Comprometido con la Gran Comisión y la formación de líderes para la obra del Señor.",
-    especialidad: "Cuidado Pastoral",
-    imagen: "/placeholder.svg?height=300&width=300",
-    ministerio: "Plantación de Iglesias",
-    experiencia: "10+ años",
-  },
-  {
-    nombre: "Pst. Juan Urbina",
-    titulo: "Pastor Invitado",
-    descripcion:
-      "Ministro con experiencia en evangelismo y plantación de iglesias. Comprometido con la Gran Comisión y la formación de líderes para la obra del Señor.",
-    especialidad: "Cuidado Pastoral",
-    imagen: "/placeholder.svg?height=300&width=300",
-    ministerio: "Plantación de Iglesias",
-    experiencia: "10+ años",
+    nombre: "Pst. Paul Rose",
+    rol: "Pastor Colaborador",
+    iglesia: "Iglesia Bautista A Manera de la Biblia Jauja ",
+    imagen: "/placeholder.svg?height=400&width=300",
   },
 ];
 
@@ -144,4 +86,19 @@ export const testimonios = [
     referencia: "Marcos 16:15",
     autor: "Jesucristo",
   },
+];
+
+export const months = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre",
 ];

@@ -1,122 +1,353 @@
 @import "tailwindcss";
 
-/* Esquema conservador para ministerio establecido - Inspirado en Grace To You */
+/* 
+Esquema de colores inspirado en el template Airfly
+Adaptado para Días de Predicación Misionera - Iglesia Bautista
+Colores: Azul marino profundo + Dorado elegante + Blancos puros
+*/
+
 @theme {
-  /* Superficies */
-  --color-background: #fff8ed; /* fondo base (claro y cálido) */
-  --color-card: #f8f8f8; /* tarjetas, bloques neutros */
-  --color-accent: #e9e8e0; /* detalles sutiles, separadores */
-  --color-border: #e9e8e0; /* bordes y divisores */
+  /* === SUPERFICIES BASE === */
+  --color-background: #ffffff; /* blanco puro para máxima elegancia */
+  --color-card: #f8f9fa; /* gris muy claro para tarjetas */
+  --color-muted: #f1f3f4; /* fondos sutiles */
+  --color-border: #e1e5e9; /* bordes suaves */
 
-  /* Texto */
-  --color-foreground: #232c32; /* texto principal en fondos claros */
-  --color-foreground-muted: #333333; /* texto secundario */
+  /* === COLORES PRINCIPALES (Inspirado en Airfly) === */
+  --color-primary: #1a252f; /* azul marino profundo - elegancia y confianza */
+  --color-primary-foreground: #ffffff; /* texto blanco sobre azul */
+  --color-primary-hover: #243342; /* hover ligeramente más claro */
+  --color-primary-light: #2c3e50; /* variante más clara para fondos grandes */
 
-  /* CTA / acciones */
-  --color-primary: #232c32; /* botón principal (oscuro) */
-  --color-primary-foreground: #f8f8f8; /* texto dentro del CTA */
-  --color-primary-hover: #293339; /* hover del CTA */
+  /* === COLORES DE ACENTO (Dorado elegante) === */
+  --color-accent: #c19a6b; /* dorado/champagne - elegancia premium */
+  --color-accent-foreground: #1a252f; /* texto oscuro sobre dorado */
+  --color-accent-hover: #b8916a; /* hover del dorado */
+  --color-accent-light: #d4a574; /* variante más clara */
 
-  /* Opcional: si quieres etiquetas o chips tenues sobre claro */
-  --color-badge: #f2e8d8;
-  --color-badge-foreground: #232c32;
+  /* === COLORES SECUNDARIOS === */
+  --color-secondary: #3498db; /* azul brillante para acentos especiales */
+  --color-secondary-foreground: #ffffff;
+  --color-secondary-hover: #2980b9;
+
+  /* === TEXTO === */
+  --color-foreground: #1a252f; /* texto principal en fondos claros */
+  --color-foreground-muted: #5a6c7d; /* texto secundario */
+  --color-foreground-light: #8b9ba8; /* texto sutil */
+
+  /* === COLORES NEUTROS === */
+  --color-muted-foreground: #6c757d; /* texto en fondos sutiles */
+
+  /* === ESTADOS Y FUNCIONES === */
+  --color-success: #28a745; /* verde elegante */
+  --color-success-foreground: #ffffff;
+  --color-warning: #ffc107; /* amarillo dorado */
+  --color-warning-foreground: #1a252f;
+  --color-destructive: #dc3545; /* rojo elegante */
+  --color-destructive-foreground: #ffffff;
+
+  /* === GRADIENTES PREMIUM === */
+  --gradient-primary: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+  --gradient-accent: linear-gradient(135deg, #c19a6b 0%, #d4a574 100%);
+  --gradient-hero: linear-gradient(
+    135deg,
+    #1a252f 0%,
+    #243342 50%,
+    #2c3e50 100%
+  );
+  --gradient-elegant: linear-gradient(45deg, #1a252f 0%, #c19a6b 100%);
+
+  /* === SOMBRAS ELEGANTES === */
+  --shadow-sm: 0 2px 4px rgba(26, 37, 47, 0.1);
+  --shadow-md: 0 4px 8px rgba(26, 37, 47, 0.12);
+  --shadow-lg: 0 8px 24px rgba(26, 37, 47, 0.15);
+  --shadow-xl: 0 12px 36px rgba(26, 37, 47, 0.18);
+  --shadow-2xl: 0 16px 48px rgba(26, 37, 47, 0.2);
+
+  /* === SOMBRAS DORADAS === */
+  --shadow-accent: 0 4px 12px rgba(193, 154, 107, 0.3);
+  --shadow-accent-lg: 0 8px 24px rgba(193, 154, 107, 0.25);
 }
 
-/* Clases de utilidad conservadoras */
+/* === CLASES DE UTILIDAD PREMIUM === */
 @layer utilities {
-  .text-primary {
-    color: var(--color-foreground);
-  }
-  .bg-background {
-    background-color: var(--color-background);
-  }
-  .bg-primary {
-    background-color: var(--color-primary);
-    color: var(--color-primary-foreground);
-  }
-  .text-muted {
-    color: var(--color-foreground-muted);
+  /* === BOTONES ESTILO AIRFLY === */
+  .btn-primary-airfly {
+    @apply bg-accent text-accent-foreground;
+    @apply px-8 py-4 rounded-full font-semibold text-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply shadow-accent hover:shadow-accent-lg;
+    @apply transform hover:-translate-y-1 hover:scale-105;
+    @apply uppercase tracking-wider;
+    @apply border-2 border-transparent;
   }
 
-  /* Botón principal conservador */
-  .btn-primary {
-    cursor: pointer;
-    background-color: var(--color-primary);
-    color: var(--color-primary-foreground);
-    padding: 0.75rem 2rem;
-    border-radius: 0.375rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: all 0.2s ease;
-    border: 2px solid var(--color-primary);
-  }
-  .btn-primary:hover {
-    background-color: var(--color-primary-hover);
-    border-color: var(--color-primary-hover);
+  .btn-primary-airfly:hover {
+    background: var(--gradient-accent);
+    @apply shadow-2xl;
   }
 
-  /* Botón secundario */
-  .btn-secondary {
-    cursor: pointer;
-    background-color: transparent;
-    color: var(--color-primary-foreground);
-    padding: 0.75rem 2rem;
-    border: 2px solid var(--color-primary-foreground);
-    border-radius: 0.375rem;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    transition: all 0.2s ease;
-  }
-  .btn-secondary:hover {
-    background-color: var(--color-primary-foreground);
-    color: var(--color-primary);
+  .btn-secondary-airfly {
+    @apply bg-transparent text-accent border-2 border-accent;
+    @apply px-8 py-4 rounded-full font-semibold text-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-accent hover:text-accent-foreground;
+    @apply transform hover:-translate-y-1;
+    @apply uppercase tracking-wider;
   }
 
-  /* Encabezados conservadores */
-  .heading-primary {
-    color: var(--color-primary);
-    font-weight: 700;
-    line-height: 1.2;
+  .btn-outline-white {
+    @apply bg-transparent text-white border-2 border-white;
+    @apply px-8 py-4 rounded-full font-semibold text-sm;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:bg-white hover:text-primary;
+    @apply transform hover:-translate-y-1;
+    @apply uppercase tracking-wider;
   }
 
-  /* Secciones destacadas */
-  .section-highlight {
-    border-left: 4px solid var(--color-primary);
+  /* === NAVEGACIÓN ELEGANTE === */
+  .nav-airfly {
+    @apply bg-primary/95 backdrop-blur-xl;
+    @apply border-b border-accent/20;
+    @apply shadow-xl;
+  }
+
+  .nav-link-airfly {
+    @apply text-white/90 hover:text-accent;
+    @apply px-6 py-3 text-sm font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply relative;
+  }
+
+  .nav-link-airfly::after {
+    content: "";
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 bg-accent;
+    @apply transition-all duration-300 ease-out;
+    @apply -translate-x-1/2;
+  }
+
+  .nav-link-airfly:hover::after {
+    @apply w-full;
+  }
+
+  /* === SECCIONES HERO PREMIUM === */
+  .hero-airfly {
+    background: var(--gradient-hero);
+    @apply relative overflow-hidden min-h-screen;
+  }
+
+  .hero-airfly::before {
+    content: "";
+    @apply absolute inset-0;
+    background: radial-gradient(
+      circle at 30% 40%,
+      rgba(193, 154, 107, 0.1) 0%,
+      transparent 50%
+    );
+  }
+
+  /* === TARJETAS ELEGANTES === */
+  .card-premium {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100;
+    @apply transition-all duration-500 ease-out;
+    @apply hover:shadow-2xl hover:-translate-y-2;
+    @apply overflow-hidden;
+  }
+
+  .card-premium:hover {
+    @apply border-accent/30;
+    box-shadow: var(--shadow-2xl), 0 0 0 1px rgba(193, 154, 107, 0.1);
+  }
+
+  .card-dark {
+    @apply bg-primary text-white rounded-2xl shadow-xl;
+    @apply transition-all duration-500 ease-out;
+    @apply hover:shadow-2xl hover:-translate-y-2;
+    @apply border border-accent/20;
+  }
+
+  /* === TIPOGRAFÍA PREMIUM === */
+  .heading-hero-airfly {
+    @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    @apply font-bold text-white leading-tight tracking-tight;
+    font-family: "Georgia", "Times New Roman", serif;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .heading-accent-airfly {
+    @apply text-accent font-semibold text-lg;
+    @apply tracking-wider uppercase;
+    @apply mb-4;
+  }
+
+  .heading-primary-airfly {
+    @apply text-3xl md:text-4xl font-bold text-primary;
+    @apply leading-tight mb-6;
+    font-family: "Georgia", "Times New Roman", serif;
+  }
+
+  /* === EFECTOS ESPECIALES === */
+  .glow-accent {
+    box-shadow: 0 0 30px rgba(193, 154, 107, 0.4);
+  }
+
+  .gradient-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* === FORMULARIOS PREMIUM === */
+  .form-input-airfly {
+    @apply w-full px-6 py-4 rounded-xl;
+    @apply bg-white border-2 border-gray-200;
+    @apply text-foreground placeholder-foreground-muted;
+    @apply focus:outline-none focus:ring-4 focus:ring-accent/20;
+    @apply focus:border-accent;
+    @apply transition-all duration-300;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .form-input-airfly:focus {
+    @apply transform -translate-y-0.5;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* === CONTADORES ELEGANTES === */
+  .countdown-airfly {
+    @apply bg-white/10 backdrop-blur-xl rounded-2xl;
+    @apply border border-white/20 shadow-2xl;
+    @apply p-8;
+  }
+
+  .countdown-number {
+    @apply text-4xl md:text-6xl font-bold text-white;
+    @apply mb-2;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .countdown-label {
+    @apply text-sm uppercase tracking-wider;
+    @apply text-white/80 font-medium;
+  }
+
+  /* === CITAS BÍBLICAS ELEGANTES === */
+  .bible-quote-airfly {
+    @apply text-xl md:text-2xl italic text-white;
+    @apply mb-6 leading-relaxed;
+    font-family: "Georgia", "Times New Roman", serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .bible-reference-airfly {
+    @apply text-accent font-bold text-lg;
+    @apply tracking-wide;
+  }
+
+  /* === SECCIONES DE INFORMACIÓN === */
+  .info-section {
+    @apply py-20 bg-gradient-to-b from-background to-muted;
+  }
+
+  .info-grid {
+    @apply grid md:grid-cols-3 gap-8;
+  }
+
+  /* === ICONOS CON ESTILO PREMIUM === */
+  .icon-container-accent {
+    @apply bg-accent text-accent-foreground;
+    @apply w-16 h-16 rounded-full;
+    @apply flex items-center justify-center;
+    @apply shadow-accent mb-6 mx-auto;
+    @apply transform transition-all duration-300;
+  }
+
+  .icon-container-accent:hover {
+    @apply scale-110 rotate-3;
+    @apply shadow-accent-lg;
+  }
+
+  .icon-container-primary {
+    @apply bg-primary text-white;
+    @apply w-16 h-16 rounded-full;
+    @apply flex items-center justify-center;
+    @apply shadow-lg mb-6 mx-auto;
+    @apply transform transition-all duration-300;
+  }
+
+  /* === FOOTER ELEGANTE === */
+  .footer-airfly {
+    @apply bg-primary text-white;
+    @apply border-t-4 border-accent;
+    @apply relative overflow-hidden;
+  }
+
+  .footer-airfly::before {
+    content: "";
+    @apply absolute top-0 left-0 w-full h-1;
+    background: var(--gradient-accent);
   }
 }
 
-/* Tipografía conservadora */
-.font-serif {
-  font-family: "Georgia", "Times New Roman", serif;
+/* === ANIMACIONES PREMIUM === */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Transiciones suaves */
-* {
-  transition: all 0.2s ease;
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
-/* Scroll suave */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Animación para el marcador del mapa */
-@keyframes pulse {
+@keyframes glow {
   0%,
   100% {
-    transform: scale(1);
-    opacity: 1;
+    box-shadow: 0 0 20px rgba(193, 154, 107, 0.3);
   }
   50% {
-    transform: scale(1.1);
-    opacity: 0.8;
+    box-shadow: 0 0 30px rgba(193, 154, 107, 0.5);
   }
 }
 
-.animate-pulse {
-  animation: pulse 2s infinite;
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.8s ease-out;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .btn-primary-airfly,
+  .btn-secondary-airfly,
+  .btn-outline-white {
+    @apply px-6 py-3 text-xs;
+  }
+
+  .heading-hero-airfly {
+    @apply text-3xl md:text-4xl;
+  }
+
+  .nav-link-airfly {
+    @apply px-4 py-2;
+  }
 }
